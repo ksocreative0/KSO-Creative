@@ -1,0 +1,8 @@
+KSO Creative — Supabase upload setup
+
+The new build uses Supabase Storage bucket: project-media.
+
+The SQL in supabase-schema.sql creates the bucket and its access policies.
+After creating the Supabase project and running the SQL, create an Auth user for the admin dashboard.
+
+No localStorage project database or client-side admin password is used in this version.

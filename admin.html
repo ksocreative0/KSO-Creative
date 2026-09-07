@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KSO Creative — Project Dashboard</title><link rel="stylesheet" href="admin.css"></head>
+<body><header><a href="index.html" class="brand">KSO CREATIVE</a><div class="header-admin"><span id="adminEmail"></span><button id="logoutBtn" class="secondary">Log out</button></div></header>
+<main><div class="top"><div><small>KSO CREATIVE / PRIVATE DASHBOARD</small><h1>Project manager</h1><p>Add, edit, publish, archive and restore projects. No project field is forced to be filled.</p></div><button id="newBtn" class="primary">+ New project</button></div>
+<section class="stats"><div><b id="total">0</b><span>Total projects</span></div><div><b id="published">0</b><span>Published</span></div><div><b id="archived">0</b><span>Archived</span></div></section>
+<div class="toolbar"><button class="tab active" data-status="all">All</button><button class="tab" data-status="published">Published</button><button class="tab" data-status="archived">Archived</button></div><div id="list"></div></main>
+<div class="modal" id="modal"><div class="modal-box"><button class="close" id="close" type="button">×</button><small>PROJECT EDITOR</small><h2 id="formTitle">Add project</h2>
+<form id="form"><input type="hidden" id="id">
+<label>Project title<input id="title" placeholder="e.g. KÉMOLUX Website"></label>
+<label>Category<select id="category"><option value="web">Website Development</option><option value="video">Video Editing & Videography</option></select></label>
+<label>Short description<textarea id="description" placeholder="What was the project about?"></textarea></label>
+<label>Project image or video<input id="media" type="file" accept="image/*,video/*"><small class="field-note">Optional. Nothing is generated automatically.</small><span id="currentMedia" class="current-media">No media uploaded</span></label>
+<label>Attached website / project URL<input id="url" type="url" placeholder="https://..."></label>
+<label>Role / contribution<input id="role" placeholder="Optional"></label>
+<label>Challenge<textarea id="challenge" placeholder="Optional"></textarea></label>
+<label>Solution<textarea id="solution" placeholder="Optional"></textarea></label>
+<label>Results<textarea id="results" placeholder="Optional"></textarea></label>
+<label>Tools used<input id="tools" placeholder="e.g. HTML, CSS, JavaScript, CapCut"></label>
+<div class="form-actions"><button type="button" class="secondary" id="cancel">Cancel</button><button class="primary" type="submit">Save project</button></div></form></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="admin.js"></script></body></html>
